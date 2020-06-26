@@ -1,17 +1,24 @@
 package mx.uam.tsis.ejemplobackend.negocio.modelo;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 import lombok.Builder;
 import lombok.Data;
 
 @Builder
 @Data
 public class Alumno {
+	
+	@NotNull
 	private Integer matricula;
 	
+	@NotBlank
 	private String nombre;
 	
+	@NotBlank
 	private String carrera;
-
+	
 	public Integer getMatricula() {
 		// TODO Auto-generated method stub
 		return matricula;
@@ -41,6 +48,8 @@ public class Alumno {
 	
       this.carrera=carrera;
 	}
+
+
 
 	
 }
